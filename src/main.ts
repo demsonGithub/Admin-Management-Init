@@ -5,8 +5,13 @@ import store from './store';
 
 import 'normalize.css/normalize.css';
 
-const app = createApp(App);
+(async () => {
+    // 1. todo 加载初始化信息
 
-app.use(router);
-app.use(store);
-app.mount('#app');
+    // 2. 初始化UI
+    const app = createApp(App);
+
+    app.use(router);
+    app.use(store);
+    app.mount('#app');
+})();
